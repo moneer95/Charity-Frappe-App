@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-06 14:38:44.236579",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "family_name",
+  "check_list_section",
+  "visited_the_potique",
+  "how_many_food_boxes",
+  "home_visited",
+  "had_medical_help",
+  "details_medical",
+  "had_taken_money",
+  "how_much",
+  "had_home_accessories",
+  "details_home_accessories",
+  "will_have_home_visit",
+  "phone_number",
+  "rate_the_family"
+ ],
+ "fields": [
+  {
+   "fieldname": "family_name",
+   "fieldtype": "Link",
+   "label": "Family Name",
+   "options": "Registered People",
+   "read_only": 1
+  },
+  {
+   "fieldname": "check_list_section",
+   "fieldtype": "Section Break",
+   "label": "Check List",
+   "print_width": "30",
+   "width": "30"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "visited_the_potique",
+   "fieldtype": "Check",
+   "label": "Visited The Potique?",
+   "print_width": "200"
+  },
+  {
+   "depends_on": "eval:doc.visited_the_potique",
+   "fieldname": "how_many_food_boxes",
+   "fieldtype": "Int",
+   "label": "How Many Food Boxes",
+   "mandatory_depends_on": "eval:doc.visited_the_potique"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "home_visited",
+   "fieldtype": "Check",
+   "label": "Home Visited?"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "had_medical_help",
+   "fieldtype": "Check",
+   "label": "Had Medical Help?"
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.had_medical_help",
+   "fieldname": "details_medical",
+   "fieldtype": "Data",
+   "label": "Details",
+   "mandatory_depends_on": "eval:doc.had_medical_help"
+  },
+  {
+   "default": "0",
+   "fieldname": "had_taken_money",
+   "fieldtype": "Check",
+   "label": "Had Taken Money?"
+  },
+  {
+   "depends_on": "eval:doc.had_taken_money",
+   "fieldname": "how_much",
+   "fieldtype": "Currency",
+   "label": "How Much?",
+   "mandatory_depends_on": "eval:doc.had_taken_money"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "had_home_accessories",
+   "fieldtype": "Check",
+   "label": "Had Home Accessories?"
+  },
+  {
+   "depends_on": "eval:doc.had_home_accessories",
+   "fieldname": "details_home_accessories",
+   "fieldtype": "Data",
+   "label": "Details",
+   "mandatory_depends_on": "eval:doc.had_home_accessories"
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "will_have_home_visit",
+   "fieldtype": "Check",
+   "label": "Will Have Home Visit"
+  },
+  {
+   "depends_on": "eval:doc.will_have_home_visit",
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "mandatory_depends_on": "eval:doc.will_have_home_visit"
+  },
+  {
+   "fieldname": "rate_the_family",
+   "fieldtype": "Rating",
+   "label": "Rate The Family"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-07 17:18:15.181500",
+ "modified_by": "Administrator",
+ "module": "Charity App",
+ "name": "Under Checking Poeple",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

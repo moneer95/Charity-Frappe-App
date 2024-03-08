@@ -1,0 +1,173 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2024-03-06 10:43:48.754024",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_inforamtion_section",
+  "family_name__last_name_",
+  "enter_your_family_data_each_person_in_a_row",
+  "phone_number",
+  "accommodation_data_section",
+  "city_name",
+  "address",
+  "rent_cost",
+  "location",
+  "get_current_location",
+  "needs_section",
+  "medical_needs",
+  "is_there_any_medical_needs_for_the_family",
+  "define_the_needs_here",
+  "need",
+  "clothes_needs",
+  "do_you_need_clothes_from_the_boutique",
+  "food_needs",
+  "do_you_need_food",
+  "home_accessories",
+  "do_you_need_essential_home_accessories_that_you_cant_afford"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_inforamtion_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Inforamtion"
+  },
+  {
+   "fieldname": "family_name__last_name_",
+   "fieldtype": "Data",
+   "label": "Family Name ( Last Name )"
+  },
+  {
+   "fieldname": "enter_your_family_data_each_person_in_a_row",
+   "fieldtype": "Table",
+   "label": "Enter your family data Each person in a Row",
+   "options": "Basic Info"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number"
+  },
+  {
+   "fieldname": "accommodation_data_section",
+   "fieldtype": "Section Break",
+   "label": "Accommodation Data"
+  },
+  {
+   "fieldname": "city_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City Name"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Address"
+  },
+  {
+   "fieldname": "rent_cost",
+   "fieldtype": "Currency",
+   "label": "Rent Cost"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Location"
+  },
+  {
+   "fieldname": "get_current_location",
+   "fieldtype": "Button",
+   "label": "Get current Location"
+  },
+  {
+   "fieldname": "needs_section",
+   "fieldtype": "Section Break",
+   "label": "In This Section You Will Define Your Needs"
+  },
+  {
+   "fieldname": "medical_needs",
+   "fieldtype": "Heading",
+   "label": "Medical Needs"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_there_any_medical_needs_for_the_family",
+   "fieldtype": "Check",
+   "label": "Is there any Medical needs for the family?"
+  },
+  {
+   "fieldname": "define_the_needs_here",
+   "fieldtype": "Data",
+   "label": "define the needs here",
+   "mandatory_depends_on": "eval:!doc.is_there_any_medical_needs_for_the_family",
+   "read_only_depends_on": "eval:!doc.is_there_any_medical_needs_for_the_family"
+  },
+  {
+   "fieldname": "need",
+   "fieldtype": "Table",
+   "label": "Need",
+   "options": "Basic Info"
+  },
+  {
+   "fieldname": "clothes_needs",
+   "fieldtype": "Heading",
+   "label": "Clothes Needs"
+  },
+  {
+   "default": "0",
+   "fieldname": "do_you_need_clothes_from_the_boutique",
+   "fieldtype": "Check",
+   "label": "Do you need clothes from the boutique?"
+  },
+  {
+   "fieldname": "food_needs",
+   "fieldtype": "Heading",
+   "label": "Food Needs"
+  },
+  {
+   "default": "0",
+   "fieldname": "do_you_need_food",
+   "fieldtype": "Check",
+   "label": "Do you Need Food?"
+  },
+  {
+   "fieldname": "home_accessories",
+   "fieldtype": "Heading",
+   "label": "Home Accessories"
+  },
+  {
+   "default": "0",
+   "fieldname": "do_you_need_essential_home_accessories_that_you_cant_afford",
+   "fieldtype": "Check",
+   "label": "Do you need essential Home accessories that you can't afford?"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-07 12:09:30.842150",
+ "modified_by": "Administrator",
+ "module": "Charity App",
+ "name": "Registered People",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
