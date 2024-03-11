@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestPeopleWaiting(unittest.TestCase):
+class TestUnderCheckingPeople(unittest.TestCase):
 	pass
