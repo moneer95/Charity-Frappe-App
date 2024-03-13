@@ -27,7 +27,8 @@
   "do_you_need_food",
   "home_accessories",
   "do_you_need_essential_home_accessories_that_you_cant_afford",
-  "define_them_here"
+  "define_them_here",
+  "status"
  ],
  "fields": [
   {
@@ -53,7 +54,6 @@
   {
    "fieldname": "city_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "City Name"
   },
   {
@@ -70,7 +70,6 @@
   {
    "fieldname": "location",
    "fieldtype": "Int",
-   "in_list_view": 1,
    "label": "Location"
   },
   {
@@ -146,11 +145,18 @@
    "fieldtype": "Table",
    "label": "Enter your family data Each person in a Row",
    "options": "Basic Information"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Waiting\nChecking"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-10 16:26:31.493010",
+ "modified": "2024-03-13 17:19:09.808490",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "Registered People",

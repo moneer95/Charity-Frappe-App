@@ -19,7 +19,6 @@ frappe.ui.form.on('Registered People', {
                     // Check if response has message property and it's a string
                     if (response.message) {
                         window.location.href = response.message;
-                        frappe.msgprint('Success');
                     } else {
                         return
                     }

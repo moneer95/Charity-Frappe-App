@@ -1,5 +1,6 @@
 import frappe
 
+
 @frappe.whitelist()
 def rename_and_redirect(doc_name, family_name, members_count):
     # structure family name that we get from client script on Registered People doctype,
@@ -28,6 +29,7 @@ def rename_and_redirect(doc_name, family_name, members_count):
 @frappe.whitelist()
 def send_to_checkList(name, members_count, medical_needs):
     try:
+
         new_doc = frappe.new_doc("Under Checking People")
 
         new_doc.name = name
@@ -51,3 +53,13 @@ def send_to_checkList(name, members_count, medical_needs):
 
     except Exception as e:
         frappe.msgprint(str(e))
+
+
+# def set_status(new_doc):
+    # Fetch the workflow state object
+    # workflow_state = frappe.get_doc("Workflow State", "Waiting and Checking")
+
+    # if workflow_state:
+    #     # Update the document's workflow state
+    #     new_doc.workflow_state = "Checking"
+    #     new_doc.save(ignore_permissions=True)
