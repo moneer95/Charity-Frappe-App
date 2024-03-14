@@ -9,6 +9,7 @@
  "field_order": [
   "family_name",
   "family_name_displayed",
+  "status",
   "check_list_section",
   "visited_the_potique",
   "how_many_food_boxes",
@@ -131,12 +132,19 @@
    "options": "Registered People",
    "read_only": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Good without Sponsorship\nSponsored by individual\nSponsored by MATW\nWaiting to be sponsored"
   }
  ],
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-13 12:12:54.746960",
+ "modified": "2024-03-14 16:17:51.565763",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "Under Checking People",
