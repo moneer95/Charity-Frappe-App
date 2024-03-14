@@ -38,6 +38,8 @@ def send_to_checkList(name, members_count, medical_needs):
         new_doc.how_many_food_boxes = int(members_count) / 3
         new_doc.details_medical = medical_needs
 
+        change_registered_doc_status(name)
+
         new_doc.insert(ignore_permissions=True)
         new_doc.save(ignore_permissions=True)
 
@@ -55,11 +57,9 @@ def send_to_checkList(name, members_count, medical_needs):
         frappe.msgprint(str(e))
 
 
-# def set_status(new_doc):
-    # Fetch the workflow state object
-    # workflow_state = frappe.get_doc("Workflow State", "Waiting and Checking")
+def change_registered_doc_status(name):
+    current_registered_doc = frappe.get_doc('Registered People', name)
+    current_registered_doc.status = "Checked"
+    current_registered_doc.save(ignore_permissions=True)
 
-    # if workflow_state:
-    #     # Update the document's workflow state
-    #     new_doc.workflow_state = "Checking"
-    #     new_doc.save(ignore_permissions=True)
+

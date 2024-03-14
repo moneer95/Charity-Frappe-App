@@ -28,6 +28,11 @@ frappe.ui.form.on('Registered People', {
 
         // add send button
         frm.add_custom_button('Send to Check List', function(){
+
+        if (frm.doc.__unsaved){
+	        frappe.throw(__("Please save the document "));
+            }
+
         frappe.call({
             method: 'charity_app.api.send_to_checkList',
             args: {
@@ -38,6 +43,7 @@ frappe.ui.form.on('Registered People', {
             callback: function(response) {
              // Check if response has message property and it's a string
                 if (response.message) {
+
                     const current_window = window
 
                     window.open(response.message[0], '_blank');

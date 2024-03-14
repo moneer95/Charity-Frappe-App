@@ -151,12 +151,12 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Waiting\nChecking"
+   "options": "Waiting\nChecked"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-13 17:19:09.808490",
+ "modified": "2024-03-14 09:48:15.174871",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "Registered People",

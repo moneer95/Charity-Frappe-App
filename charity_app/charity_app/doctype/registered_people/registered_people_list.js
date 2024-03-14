@@ -4,8 +4,8 @@ frappe.listview_settings['Registered People'] = {
             return [__("Waiting"), 'yellow', "status,=," + doc.status];
         }
 
-        if (doc.status === "Checking") {
-            return [__("Checking"), 'green', "status,=," + doc.status];
+        if (doc.status === "Checked") {
+            return [__("Checked"), 'green', "status,=," + doc.status];
         }
     }
 }
