@@ -12,7 +12,10 @@ def rename_and_redirect(doc_name, family_name, members_count):
     # because family name field will be empty
     if(doc_name != structured_name):
         # rename the doc
-        new_confirmed_name = frappe.rename_doc('Registered People', doc_name, structured_name)
+        try:
+            new_confirmed_name = frappe.rename_doc('Registered People', doc_name, structured_name)
+        except:
+            new_confirmed_name = rename(doc_name, structured_name, 1)
 
         # get the url of the doc after renaming
         new_url = frappe.utils.get_url_to_form('Registered People', new_confirmed_name)
@@ -55,6 +58,16 @@ def send_to_checkList(name, members_count, medical_needs):
 
     except Exception as e:
         frappe.msgprint(str(e))
+
+
+def rename(doc_name, structured_name, i):
+    i = i
+    try:
+        new_modified_name = frappe.rename_doc('Registered People', doc_name, f'{structured_name} ({i})')
+        return new_modified_name
+
+    except:
+        return rename(doc_name, structured_name, i + 1)
 
 
 def change_registered_doc_status(name):
