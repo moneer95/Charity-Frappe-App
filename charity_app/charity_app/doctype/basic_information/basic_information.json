@@ -17,31 +17,32 @@
    "fieldname": "first_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "First Name"
+   "label": "( \u0627\u0633\u0645 \u0627\u0644\u0641\u0631\u062f )First Name",
+   "translatable": 1
   },
   {
    "fieldname": "age",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Age"
+   "label": "( \u0627\u0644\u0639\u0645\u0631 ) Age"
   },
   {
    "fieldname": "passport_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Passport Number"
+   "label": "( \u0631\u0642\u0645 \u062c\u0648\u0627\u0632 \u0627\u0644\u0633\u0641\u0631 ) Passport Number"
   },
   {
    "fieldname": "passport_image",
    "fieldtype": "Attach",
    "in_list_view": 1,
-   "label": "Passport Image"
+   "label": "( \u0635\u0648\u0631\u0629 \u062c\u0648\u0627\u0632 \u0627\u0644\u0633\u0641\u0631 ) Passport Image"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-15 16:36:02.012400",
+ "modified": "2024-03-17 09:46:27.795525",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "Basic Information",
