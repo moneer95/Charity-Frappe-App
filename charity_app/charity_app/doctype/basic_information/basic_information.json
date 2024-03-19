@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{MM}-{DD}-{SS}",
+ "autoname": "passport_number",
  "creation": "2024-03-07 14:49:03.487439",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,7 +10,8 @@
   "first_name",
   "age",
   "passport_number",
-  "passport_image"
+  "passport_image",
+  "_\u0631\u0642\u0645_\u0627\u0644\u0647\u0627\u062a\u0641_\u0625\u0646_\u0648\u062c\u062f__phone_number"
  ],
  "fields": [
   {
@@ -37,12 +38,18 @@
    "fieldtype": "Attach",
    "in_list_view": 1,
    "label": "( \u0635\u0648\u0631\u0629 \u062c\u0648\u0627\u0632 \u0627\u0644\u0633\u0641\u0631 ) Passport Image"
+  },
+  {
+   "fieldname": "_\u0631\u0642\u0645_\u0627\u0644\u0647\u0627\u062a\u0641_\u0625\u0646_\u0648\u062c\u062f__phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "( \u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641 \u0625\u0646 \u0648\u062c\u062f ) phone number"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-17 09:46:27.795525",
+ "modified": "2024-03-19 06:29:30.308281",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "Basic Information",

@@ -3,6 +3,6 @@
 
 frappe.ui.form.on('Under Checking People', {
 	 refresh: function(frm) {
-//        frappe.msgprint(frm.doc.family_name_displayed)
+//        frappe.msgprint(frappe.session.user)
 	 }
 });

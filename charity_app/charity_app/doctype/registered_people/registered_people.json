@@ -11,6 +11,7 @@
   "family_name__last_name_",
   "enter_your_family_data_each_person_in_a_row",
   "phone_number",
+  "whatsapp_number",
   "accommodation_data_section",
   "city_name",
   "address",
@@ -28,6 +29,7 @@
   "home_accessories",
   "do_you_need_essential_home_accessories_that_you_cant_afford",
   "define_them_here",
+  "will_visit_us_in",
   "status"
  ],
  "fields": [
@@ -42,9 +44,10 @@
    "label": "Family Name ( Last Name )"
   },
   {
+   "depends_on": "eval:frappe.session.user == 'Guest'",
    "fieldname": "phone_number",
    "fieldtype": "Data",
-   "label": "Phone Number"
+   "label": "Phone Number Egypt"
   },
   {
    "fieldname": "accommodation_data_section",
@@ -59,7 +62,6 @@
   {
    "fieldname": "address",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Address"
   },
   {
@@ -75,6 +77,7 @@
   {
    "fieldname": "get_current_location",
    "fieldtype": "Button",
+   "hidden": 1,
    "label": "Get current Location"
   },
   {
@@ -150,15 +153,25 @@
    "default": "Waiting",
    "fieldname": "status",
    "fieldtype": "Select",
-   "hidden": 1,
    "in_list_view": 1,
    "label": "Status",
-   "options": "Waiting\nChecked"
+   "options": "Waiting\nWill Visit Us\nChecked"
+  },
+  {
+   "fieldname": "will_visit_us_in",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Will visit us in"
+  },
+  {
+   "fieldname": "whatsapp_number",
+   "fieldtype": "Data",
+   "label": "Whatsapp number"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-16 05:55:07.252295",
+ "modified": "2024-03-19 06:35:19.115327",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "Registered People",
