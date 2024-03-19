@@ -10,6 +10,7 @@
   "basic_inforamtion_section",
   "family_name__last_name_",
   "enter_your_family_data_each_person_in_a_row",
+  "arrival_date",
   "phone_number",
   "whatsapp_number",
   "accommodation_data_section",
@@ -167,11 +168,16 @@
    "fieldname": "whatsapp_number",
    "fieldtype": "Data",
    "label": "Whatsapp number"
+  },
+  {
+   "fieldname": "arrival_date",
+   "fieldtype": "Date",
+   "label": "Arrival Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-19 06:35:19.115327",
+ "modified": "2024-03-19 12:15:19.937952",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "Registered People",

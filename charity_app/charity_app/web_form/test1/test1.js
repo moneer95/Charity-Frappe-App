@@ -81,6 +81,12 @@ frappe.web_form.validate = () => {
         }
     }
 
+    value = frappe.web_form.get_value(['arrival_date']);
+    if (!value){
+        frappe.msgprint('!أدخل تاريخ الوصول');
+        return false;
+    }
+
     value = frappe.web_form.get_value(['phone_number']);
     if (!value){
         frappe.msgprint('!أدخل رقم هاتفك المصري');

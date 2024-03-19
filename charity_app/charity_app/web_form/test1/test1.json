@@ -19,7 +19,7 @@
  "is_standard": 1,
  "login_required": 0,
  "max_attachment_size": 5,
- "modified": "2024-03-19 07:39:35.625791",
+ "modified": "2024-03-19 12:16:06.593754",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "test1",
@@ -80,6 +80,18 @@
    "max_length": 0,
    "max_value": 0,
    "options": "Basic Information",
+   "read_only": 0,
+   "reqd": 0,
+   "show_in_filter": 0
+  },
+  {
+   "allow_read_on_all_link_options": 0,
+   "fieldname": "arrival_date",
+   "fieldtype": "Date",
+   "hidden": 0,
+   "label": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0648\u0635\u0648\u0644",
+   "max_length": 0,
+   "max_value": 0,
    "read_only": 0,
    "reqd": 0,
    "show_in_filter": 0
