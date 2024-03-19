@@ -1,10 +1,21 @@
 frappe.ready(function() {
 	// bind events here
+    const successCallback = (position) => {
+      console.log(position);
+    };
 
+    const errorCallback = (error) => {
+      console.log(error);
+    };
+
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 
 
     document.querySelector('.navbar-expand-lg').innerHTML = ''
     document.querySelector('.navbar-expand-lg').style.display = 'none';
+
+    document.querySelector('.footer-powered').innerHTML = ''
+    document.querySelector('.footer-powered').style.display = 'none';
 
     // Select the button element with class "btn-primary" inside the ".web-form-actions" div
     // const webFormActionsDiv = document.querySelector('.web-form-actions');

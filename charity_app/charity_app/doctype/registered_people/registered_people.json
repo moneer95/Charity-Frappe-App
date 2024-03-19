@@ -16,6 +16,7 @@
   "accommodation_data_section",
   "city_name",
   "address",
+  "accommodation_type",
   "rent_cost",
   "location",
   "get_current_location",
@@ -66,13 +67,15 @@
    "label": "Address"
   },
   {
+   "depends_on": "eval: doc.accommodation_type == \"Rent ( \u0625\u064a\u062c\u0627\u0631 )\"",
    "fieldname": "rent_cost",
-   "fieldtype": "Currency",
-   "label": "Rent Cost"
+   "fieldtype": "Int",
+   "label": "Rent Cost",
+   "mandatory_depends_on": "eval: doc.accommodation_type == \"Rent ( \u0625\u064a\u062c\u0627\u0631 )\""
   },
   {
    "fieldname": "location",
-   "fieldtype": "Int",
+   "fieldtype": "Data",
    "label": "Location"
   },
   {
@@ -173,11 +176,17 @@
    "fieldname": "arrival_date",
    "fieldtype": "Date",
    "label": "Arrival Date"
+  },
+  {
+   "fieldname": "accommodation_type",
+   "fieldtype": "Select",
+   "label": "Accommodation Type",
+   "options": "Owned ( \u0645\u0644\u0643 )\nHosted ( \u0627\u0633\u062a\u0636\u0627\u0641\u0629 )\nRent ( \u0625\u064a\u062c\u0627\u0631 )"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-19 12:15:19.937952",
+ "modified": "2024-03-19 20:19:23.964303",
  "modified_by": "Administrator",
  "module": "Charity App",
  "name": "Registered People",
