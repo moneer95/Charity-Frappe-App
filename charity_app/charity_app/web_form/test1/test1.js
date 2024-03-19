@@ -1,15 +1,5 @@
 frappe.ready(function() {
 	// bind events here
-    const successCallback = (position) => {
-      console.log(position);
-    };
-
-    const errorCallback = (error) => {
-      console.log(error);
-    };
-
-    navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-
 
     document.querySelector('.navbar-expand-lg').innerHTML = ''
     document.querySelector('.navbar-expand-lg').style.display = 'none';
