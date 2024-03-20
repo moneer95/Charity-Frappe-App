@@ -75,7 +75,7 @@ frappe.web_form.validate = () => {
             return false;
         }
 
-        if(!child.passport_number){
+        if(!child.passport_image){
             frappe.msgprint('!يجب إرفاق صورة جواز السفر');
             frappe.msgprint('أرفق صورة الهوية في حال عدم وجود جواز سفر');
             return false;
@@ -112,12 +112,6 @@ frappe.web_form.validate = () => {
         return false;
     }
 
-    value = frappe.web_form.get_value(['rent_cost']);
-    if (!value){
-        frappe.msgprint('!أدخل قيمة الإيجار');
-        return false;
-    }
-
     value = frappe.web_form.get_value(['location']);
     if (!value){
         frappe.msgprint('!أدخل اللوكيشن من خرائط جوجل');
@@ -129,5 +123,12 @@ frappe.web_form.validate = () => {
 
 };
 
+frappe.web_form.handle_success = () => {
+    frappe.msgprint(__('تم التسجيل بنجاح'));
+    frappe.msgprint(__('سيتم التواصل معكم في أقرب وقت'));
+    setTimeout(() => {
+        location.reload();
+    }, 3000)
+    }
 })
 
